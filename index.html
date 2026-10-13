@@ -45,7 +45,7 @@
   </section>
   <hr>
   <h1 id="ko">리토노 개인정보처리방침</h1>
-  <p class="muted">시행일: 2026년 10월 11일</p>
+  <p class="muted">시행일: 2026년 10월 13일</p>
 
   <p>「리토노」(영문명: Ritono, 기존 이름: Distraway·집중 백색소음, 이하 "앱") 이용에는 구글 또는 애플 계정 로그인이 필요합니다. 로그인 상태가 유지되면 소리 재생은 오프라인으로 이용할 수 있습니다. 계정 인증을 위해 아래 정보를 처리합니다.</p>
 
@@ -54,7 +54,7 @@
   <p>이 정보는 회원 생성, 로그인 상태 유지 및 계정 식별을 위해 사용됩니다. 인증 서비스는 네트워크 요청을 처리하기 위해 IP 주소 등의 연결 정보를 받을 수 있습니다. 소리 재생 기록과 뽀모도로 설정은 계정 서버로 전송하지 않습니다.</p>
 
   <h2>2. 기기에 저장하는 정보</h2>
-  <p><strong>Android 몰입 기록:</strong> 몰입 세션의 시작 시각, 타이머 집중 구간의 경과 시간과 완료 여부를 기기 내부에 저장하여 하루 누적 시간과 날짜별 기록을 보여줍니다. 실제 집중도나 뇌 활동을 감지하지 않습니다. 이 기록은 계정 서버에 전송하거나 Android 백업에 포함하지 않으며, 이 기기의 로그인 계정 간에 공유됩니다. 로그아웃해도 기록은 남으며 앱 삭제 또는 Android 설정의 앱 저장공간 삭제로 지울 수 있습니다.</p>
+  <p><strong>Android 몰입 기록:</strong> 몰입 세션의 시작 시각, 타이머 집중 구간의 경과 시간과 완료 여부를 기기 내부에 저장하여 하루 누적 시간과 날짜별 기록을 보여줍니다. 다른 앱을 사용하는 동안 자동 일시정지하며 휴식 구간을 기록에서 제외합니다. 앱 자체의 화면 상태와 휴대폰 잠금·화면 상태만 확인하고, 다른 앱의 이름이나 사용 내역은 읽거나 저장하지 않습니다. 실제 집중도나 뇌 활동을 감지하지 않습니다. 이 기록은 계정 서버에 전송하거나 Android 백업에 포함하지 않으며, 이 기기의 로그인 계정 간에 공유됩니다. 로그아웃해도 기록은 남으며 앱 삭제 또는 Android 설정의 앱 저장공간 삭제로 지울 수 있습니다.</p>
   <p>이용자가 고른 하루 몰입 목표, 뽀모도로 집중 시간, 몰입 모드 설정과 첫 사용 안내 완료 여부를 기기 내부에 저장합니다. 몰입 모드를 해제할 때 복원하기 위해 필요한 기존 방해 금지 설정도 일시적으로 저장합니다. 이 설정은 기기 밖으로 전송하지 않습니다. 로그인한 경우에는 Firebase SDK가 인증 상태를 기기에 저장합니다. 로그아웃하면 앱의 로그인 세션이 해제되지만 서버의 회원 계정이 삭제되지는 않습니다.</p>
 
   <p><strong>프리미엄 구매 및 설정 저장:</strong> 선택한 소리와 타이머 설정은 기기에만 저장합니다. 프리미엄 일회성 결제와 구매 복원은 Google Play 결제 서비스를 사용하며 상품 ID, 구매 토큰, 구매 상태 및 서명된 구매 기록을 처리합니다. 확인한 구매 기록은 오프라인 이용을 위해 기기에 보관하고 Play 연결 시 구매 권한을 다시 확인합니다. 앱은 카드 번호나 계좌 정보를 직접 받거나 저장하지 않습니다. 회원 계정 삭제는 Google Play 구매 내역 삭제나 환불을 뜻하지 않습니다. 구매와 환불 관련 정보는 Google Play에서 관리합니다.</p>
@@ -62,9 +62,10 @@
   <h2>3. 사용하는 권한</h2>
   <ul>
     <li><strong>인터넷</strong>: 회원가입, 로그인, 프리미엄 구매 및 구매 권한 확인에 사용합니다. 로그인 상태가 유지되면 소리 재생에는 인터넷이 필요하지 않습니다.</li>
-    <li><strong>알림</strong>: 재생 중임을 알리고, 알림에서 남은 시간 확인과 정지를 할 수 있게 합니다.</li>
+    <li><strong>알림</strong>: 몰입·재생 상태, 경과 또는 남은 시간, 오늘 누적 몰입 시간과 일시정지·계속하기·종료 버튼을 표시합니다. 휴대폰의 알림 및 잠금 화면 설정에 따라 잠금 화면에서도 시간이 보일 수 있습니다. 홈 화면 위젯에도 오늘 누적 시간과 현재 타이머를 표시합니다.</li>
+    <li><strong>부팅 완료 수신</strong>: 휴대폰 재시작 후 추가된 몰입 시간 위젯의 오늘 기록을 갱신합니다. 몰입 세션이나 소리 재생을 자동으로 시작하지 않습니다.</li>
     <li><strong>포그라운드 서비스(미디어 재생)</strong>: 화면이 꺼져도 소리를 계속 재생합니다.</li>
-    <li><strong>방해 금지 접근(선택)</strong>: 몰입 모드에서 전화를 허용하고 다른 알림의 소리·진동·팝업과 알람을 억제합니다. 재생을 정지하거나 몰입 모드를 끄면 앱이 적용한 제한을 해제합니다. 알림 내용, 연락처 및 통화 기록을 읽거나 수집하지 않습니다.</li>
+    <li><strong>방해 금지 접근(선택)</strong>: 몰입 모드에서 전화와 알람을 허용하고 다른 알림의 소리·진동·팝업을 억제합니다. 재생을 정지하거나 몰입 모드를 끄면 앱이 적용한 제한을 해제합니다. 알림 내용, 연락처 및 통화 기록을 읽거나 수집하지 않습니다.</li>
   </ul>
 
   <h2>4. 제3자 제공 및 광고</h2>
@@ -84,22 +85,23 @@
   <hr>
   <section lang="en" aria-labelledby="en">
     <h1 id="en">Ritono Privacy Policy</h1>
-    <p class="muted">Effective date: October 11, 2026</p>
+    <p class="muted">Effective date: October 13, 2026</p>
     <p>Ritono (formerly Distraway and 집중 백색소음, the “app”) requires Google or Apple sign-in. Sound playback works offline while you remain signed in. Sign-in processes account information as described below.</p>
     <h2>1. Personal data collection</h2>
     <p>Sign-up and sign-in use Firebase Authentication and your chosen provider (Google or Apple) to process your account identifier, email address, and name and profile photo URL when provided. The app displays your name and email but does not display your photo. Apple Hide My Email may supply a relay address. The app does not directly receive or store your Google or Apple password or collect location, contacts or call history.</p>
     <p>Account information is used to create accounts, maintain sign-in sessions and identify members. Authentication services may receive connection information such as an IP address when processing network requests. Sound playback history and Pomodoro settings are not sent to an account server.</p>
     <h2>2. Information stored on your device</h2>
-    <p><strong>Android focus history:</strong> Session start times, elapsed focus timer durations and completion status are stored locally to show daily totals and history. The app does not detect attention or brain activity. These records are not sent to an account server or included in Android backup and are shared across sign-ins on this device. Signing out keeps the history; uninstalling the app or clearing its storage in Android settings removes it.</p>
+    <p><strong>Android focus history:</strong> Session start times, elapsed focus timer durations and completion status are stored locally to show daily totals and history. Focus automatically pauses while you use other apps, and paused intervals are excluded from recorded focus time. The app only checks its own screen state and whether the phone is locked or interactive; it does not read or store other app names or usage history. The app does not detect attention or brain activity. These records are not sent to an account server or included in Android backup and are shared across sign-ins on this device. Signing out keeps the history; uninstalling the app or clearing its storage in Android settings removes it.</p>
     <p>Your daily focus goal, selected Pomodoro duration, Focus mode setting and first-use tutorial completion are saved locally. Previous Do Not Disturb settings needed for restoration are temporarily saved locally. These settings are not transmitted. When signed in, the Firebase SDK also stores authentication state on your device. Signing out ends your app session without deleting your server account.</p>
     <p><strong>Premium purchases and saved setups:</strong> Your saved sound and timer setup stays on your device. Optional one-time purchases and restoration use Google Play Billing to process product IDs, purchase tokens, purchase status and signed purchase records. Verified records are kept locally for offline access, and entitlement is checked again when connected to Play. The app does not directly receive or store card or bank details. Deleting your app account does not delete Google Play purchase records or request a refund. Google Play manages purchases and refunds.</p>
 
     <h2>3. Permissions</h2>
     <ul>
       <li><strong>Internet:</strong> enable account sign-up, sign-in, Premium purchases and entitlement checks. Sound playback works offline while you remain signed in.</li>
-      <li><strong>Notifications:</strong> show playback status, timer countdown and playback controls.</li>
+      <li><strong>Notifications:</strong> show focus and playback status, elapsed or remaining time, today’s focus total, and pause, resume and finish controls. Times may also appear on the lock screen depending on your phone’s notification and lock screen settings. The home screen widget also shows today’s total and the current timer.</li>
+      <li><strong>Receive boot completed:</strong> refresh the added focus time widget after your phone restarts. This does not automatically start focus sessions or sound playback.</li>
       <li><strong>Foreground service (media playback):</strong> keep playing sounds when your screen is off.</li>
-      <li><strong>Do Not Disturb access (optional):</strong> allow calls while temporarily suppressing other notification sounds, vibrations, pop-ups and alarms in Focus mode. Stopping playback or turning Focus mode off removes the restriction applied by the app. The app does not read or collect notification contents, contacts or call history.</li>
+      <li><strong>Do Not Disturb access (optional):</strong> allow calls and alarms while temporarily suppressing other notification sounds, vibrations and pop-ups in Focus mode. Stopping playback or turning Focus mode off removes the restriction applied by the app. The app does not read or collect notification contents, contacts or call history.</li>
     </ul>
     <h2>4. Third parties and advertising</h2>
     <p>The app has no ads or analytics. Account authentication uses Google’s Firebase Authentication and your chosen Google or Apple authentication service to process necessary account information. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>, <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> for the providers’ data handling.</p>
