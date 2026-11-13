@@ -45,13 +45,14 @@
   </section>
   <hr>
   <h1 id="ko">리토노 개인정보처리방침</h1>
-  <p class="muted">시행일: Android 1.21 배포일 (1.21 안내 작성: 2026년 10월 27일)</p>
+  <p class="muted">시행일: Android 1.27 배포일 (멤버십 안내 갱신: 2026년 11월 13일)</p>
 
   <p>「리토노」(영문명: Ritono, 기존 이름: Distraway·집중 백색소음, 이하 "앱") 1.21부터는 로그인 없이 몰입과 소리를 이용할 수 있습니다. 기존 1.20 이하 버전은 로그인이 필요합니다. 1.21의 Google·Apple 로그인은 설정에서 선택하며, 선택한 계정 인증에 아래 정보를 처리합니다. 몰입 기록과 소리 재생은 계정 없이 오프라인에서도 이용할 수 있습니다.</p>
 
   <h2>1. 수집하는 개인정보</h2>
   <p>회원가입 및 로그인 시 Firebase Authentication과 선택한 인증 제공업체(Google 또는 Apple)를 통해 계정 식별자, 이메일 주소, 제공되는 이름 및 프로필 사진 주소를 처리합니다. 앱은 이름과 이메일을 계정 화면에 표시하며 프로필 사진을 표시하지 않습니다. 애플의 이메일 숨기기를 선택하면 실제 이메일 대신 중계 이메일이 사용될 수 있습니다. 앱은 구글·애플 계정 비밀번호를 직접 받거나 저장하지 않으며, 위치·연락처·통화 기록을 수집하지 않습니다.</p>
   <p>이 정보는 회원 생성, 로그인 상태 유지 및 계정 식별을 위해 사용됩니다. 인증 서비스는 네트워크 요청을 처리하기 위해 IP 주소 등의 연결 정보를 받을 수 있습니다. 소리 재생 기록과 뽀모도로 설정은 계정 서버로 전송하지 않습니다.</p>
+  <p><strong>선택형 멤버십 권한 확인(1.27부터):</strong> 로그인한 경우 Firebase 인증 토큰과 앱 식별자를 당사가 운영하는 멤버십 서버(aseptic-membership.vercel.app)에 암호화된 연결로 전송하여 해당 계정의 이용 권한을 확인합니다. 서버는 토큰에 포함된 계정 식별 정보와 멤버십 상태를 처리하며, 앱은 권한 응답을 메모리에 잠시 보관하고 주기적으로 다시 확인합니다. 몰입 기록, 소리 재생 이력과 기기 설정은 이 서버로 전송하지 않습니다. 로그아웃하면 메모리의 멤버십 권한 정보가 해제됩니다.</p>
 
   <h2>2. 기기에 저장하는 정보</h2>
   <p><strong>Android 몰입 기록:</strong> 몰입 세션의 시작 시각, 타이머 집중 구간의 경과 시간과 완료 여부를 기기 내부에 저장하여 하루 누적 시간과 날짜별 기록을 보여줍니다. 다른 앱을 사용하는 동안 자동 일시정지하며 휴식 구간을 기록에서 제외합니다. 앱 자체의 화면 상태와 휴대폰 잠금·화면 상태만 확인하고, 다른 앱의 이름이나 사용 내역은 읽거나 저장하지 않습니다. 실제 집중도나 뇌 활동을 감지하지 않습니다. 이 기록은 계정 서버에 전송하거나 Android 백업에 포함하지 않으며, 이 기기의 로그인 계정 간에 공유됩니다. 로그아웃해도 기록은 남으며 앱 삭제 또는 Android 설정의 앱 저장공간 삭제로 지울 수 있습니다.</p>
@@ -85,11 +86,12 @@
   <hr>
   <section lang="en" aria-labelledby="en">
     <h1 id="en">Ritono Privacy Policy</h1>
-    <p class="muted">Effective from Android 1.21 release (1.21 notice prepared October 27, 2026)</p>
+    <p class="muted">Effective from Android 1.27 release (membership notice updated November 13, 2026)</p>
     <p>Ritono (formerly Distraway and 집중 백색소음, the “app”) version 1.21 supports focus sessions and sounds without sign-in, including offline. Versions 1.20 and earlier require sign-in. In 1.21, Google or Apple sign-in is optional in settings and processes account information as described below only when you choose to sign in.</p>
     <h2>1. Personal data collection</h2>
     <p>Sign-up and sign-in use Firebase Authentication and your chosen provider (Google or Apple) to process your account identifier, email address, and name and profile photo URL when provided. The app displays your name and email but does not display your photo. Apple Hide My Email may supply a relay address. The app does not directly receive or store your Google or Apple password or collect location, contacts or call history.</p>
     <p>Account information is used to create accounts, maintain sign-in sessions and identify members. Authentication services may receive connection information such as an IP address when processing network requests. Sound playback history and Pomodoro settings are not sent to an account server.</p>
+    <p><strong>Optional membership access checks (from 1.27):</strong> When signed in, the app sends a Firebase authentication token and app identifier over an encrypted connection to our membership server (aseptic-membership.vercel.app) to check access for that account. The server processes account identity information in the token and membership status. The app briefly holds the access response in memory and checks it again periodically. Focus records, playback history and device settings are not sent to this server. Signing out clears the membership access held in memory.</p>
     <h2>2. Information stored on your device</h2>
     <p><strong>Android focus history:</strong> Session start times, elapsed focus timer durations and completion status are stored locally to show daily totals and history. Focus automatically pauses while you use other apps, and paused intervals are excluded from recorded focus time. The app only checks its own screen state and whether the phone is locked or interactive; it does not read or store other app names or usage history. The app does not detect attention or brain activity. These records are not sent to an account server or included in Android backup and are shared across sign-ins on this device. Signing out keeps the history; uninstalling the app or clearing its storage in Android settings removes it.</p>
     <p>Your daily focus goal, selected Pomodoro duration, Focus mode setting and first-use tutorial completion are saved locally. Previous Do Not Disturb settings needed for restoration are temporarily saved locally. These settings are not transmitted. When signed in, the Firebase SDK also stores authentication state on your device. Signing out ends your app session without deleting your server account.</p>
